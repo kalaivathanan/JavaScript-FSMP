@@ -1,0 +1,109 @@
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0PX;
+     padding: 0px;
+     background-color: rgb(188, 188, 198);
+     color: #0F013C;
+ }
+
+ h1 {
+     text-align: center;
+     color: #0F013C;
+ }
+
+ .assignment {
+     margin: 0px 40px 40px 40px;
+     padding: 15px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     background-color: #0F013C;
+     color: white;
+ }
+
+ .assignment h2 {
+     margin-top: 0;
+ }
+
+ .assignment p {
+     margin-top: 5px;
+ }
+
+ .assignment:hover {
+     background-color: #19006b;
+ }
+ 
+ .logo {
+     display: block;
+     margin: 0 auto;
+     text-align: center;
+ }
+
+ .footer {
+     text-align: center;
+     margin: 0px;
+     padding: 20px 0;
+     background-color: #0F013C;
+     color: #ffff;
+ }
+.footer a{
+    text-decoration: none;
+    color: #ffff;
+}
+.footer a:hover {
+    text-decoration: none;
+    color: #00fc15;
+}
+
+.assignment .answer h2 {
+    color: #00fc15;
+}
+.assignment .answer p {
+    color: rgb(160, 247, 167);
+}
+
+
+.answer input{
+    border-radius: 4px;
+    border: none;
+    height: 23px;
+
+}
+/* calculator */
+.answer .display input {
+    width: 127px;
+    height: 25px;
+    margin-bottom: 5px;
+    background: #dbd1d1;
+}
+
+.answer .input input {
+    width: 60px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.answer .btn-cal button {
+    width: 30px;
+    height: 25px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+/* User Greets */
+.answer .btn{
+    background: #00fc15;
+    padding: 5px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #ffff;
+}
+.answer #min, #max{
+    width: 40px;
+    margin-left: 5px;
+    margin-right: 10px;
+
+}
+
+

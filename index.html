@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>java Script BootCamp</title>
+  </head>
+  <body>
+    <section>
+      <div class="logo">
+        <img src="https://developersstack.com/assets/logo/logo-blue.png" alt="Academy Logo" width="200" />
+      </div>
+      <h1>JavaScript Assignment 01</h1>
+
+      <div class="assignment">
+        <h2>Variables (📦)</h2>
+        <p>Write a program to calculate the area of a rectangle using variables to store the length and width.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>Calculate Rectangle area (length - 20 and width - 10) :- <span id="area"></span></p>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Arithmetic Operators (➕)</h2>
+        <p>
+          Create a simple calculator program that takes two numbers as input and performs arithmetic operations (+,
+          -, *, /) on them.
+        </p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <div class="display">
+            <input placeholder="Display" disabled id="display" type="text" />
+          </div>
+          <div class="input">
+            <input placeholder="input 1" id="input1" type="number" />
+            <input placeholder="input 2" id="input2" type="number" />
+          </div>
+          <div class="btn-cal">
+            <button onclick="calculate(this.id)" id="+">+</button>
+            <button onclick="calculate(this.id)" id="-">-</button>
+            <button onclick="calculate(this.id)" id="/">/</button>
+            <button onclick="calculate(this.id)" id="*">*</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Accept User Input (💬)</h2>
+        <p>Develop a program that asks the user for their name and greets them with a personalized message.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>Greeting Program<button onclick="greet()" class="btn">Click Me!</button></p>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Type Conversion (💱)</h2>
+        <p>Write a program that takes a number as input and converts it to a string, then back to a number.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            Enter Your Age <input id="age" type="text" />
+            <button onclick="convert()" class="btn">Click Me!</button>
+          </p>
+          <p id="before-convert"></p>
+          <p id="after-convert"></p>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Constants (🚫)</h2>
+        <p>Implement a program that calculates the circumference of a circle using a constant value for π.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            calculates the circumference of a circle. Enter the radius of circle :
+            <input id="radius" type="number" /> <button onclick="Constants()" class="btn">Click Me!</button>
+          </p>
+          <p id="circumference"></p>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Counter Program (🔢)</h2>
+        <p>Build a counter program that allows users to increment, decrement, and reset a counter value.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>Counter Value: <span id="count">0</span></p>
+          <button onclick="count(this.id)" id="+">+</button>
+          <button onclick="count(this.id)" id="-">-</button>
+          <button onclick="count(this.id)" id="reset">reset</button>
+          <p id="circumference"></p>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Math Object (🧮)</h2>
+        <p>Utilize the Math object to generate random numbers within a specific range.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            generate random numbers: min - <input id="min" type="number" /> max -
+            <input id="max" type="number" /><button onclick="random()" class="btn">Click Me!</button>
+          </p>
+          <p id="random"></p>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Random Number Generator (⁉)</h2>
+        <p>
+          Create a program that generates a random number and asks the user to guess it. Provide hints if the guess
+          is too high or too low.
+        </p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            guess the Correct Value: min - <input id="UserGuess-min" type="number" /> max -
+            <input id="UserGuess-max" type="number" /><button onclick="UserGuess()" class="btn">Click Me!</button>
+          </p>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>If Statements (🤔)</h2>
+        <p>Write a program that checks whether a given number is even or odd using if statements.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            Give a number is even or odd:<input id="number" type="number" />
+            <button onclick="checkNumber()" class="btn">Click Me!</button>
+          </p>
+          <p id="random"></p>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Checked Property (✅)</h2>
+        <p>
+          Develop a program that checks if a checkbox is checked or unchecked and updates the display accordingly.
+        </p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            Checked Property : <input id="checkbox" onchange="checkCheckbox()" type="checkbox" />
+            <label for="checkbox"> Click Me!</label>
+          </p>
+
+          <p id="checkbox-result"></p>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Ternary Operator (❓)</h2>
+        <p>Rewrite a simple if-else statement using the ternary operator.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            Checked Property : <input id="checkbox1" onchange="checkCheckbox()" type="checkbox" />
+            <label for="checkbox1"> Click Me!</label>
+          </p>
+
+          <p id="checkbox-result1"></p>
+        </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Switches (💡)</h2>
+        <p>
+          Implement a program that takes a day number (1-7) and returns the corresponding day of the week using a
+          switch statement.
+        </p>
+         <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            corresponding day of the week: Give a day number (1-7) <input id="day-number" type="number" />
+            <button onclick="correspondingDay()" class="btn">Click Me!</button>
+          </p>
+          <p id="day-result"></p>
+         </div>
+      </div>
+
+      <div class="assignment">
+        <h2>String Methods (🧵)</h2>
+        <p>
+          Create a program that takes a sentence as input and counts the number of vowels using string methods.
+        </p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            counts the number of vowels: Give a sentence <input id="sentence" type="text" />
+            <button onclick="countVowels()" class="btn">Click Me!</button>
+          </p>
+          <p id="sentence-result"></p>
+         </div>
+      </div>
+
+      <div class="assignment">
+        <h2>String Slicing (✂️)</h2>
+        <p>Write a program that extracts the domain name from a given URL using string slicing.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            Find extracts the domain name from a given URL: Give a URL <input id="url" type="text" />
+            <button onclick="findURL()" class="btn">Click Me!</button>
+          </p>
+          <p id="url-result"></p>
+         </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Method Chaining (⛓)</h2>
+        <p>
+          Use method chaining to manipulate a string (e.g., convert to uppercase, reverse, and then replace
+          characters).
+        </p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            chaining to manipulate a string: Give a String <input id="chaining-string" type="text" />
+            <button onclick="chaining()" class="btn">Click Me!</button>
+          </p>
+          <p id="chaining-result"></p>
+         </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Logical Operators (❗)</h2>
+        <p>
+          Develop a program that checks whether a person is eligible for voting based on age and nationality using
+          logical operators.
+        </p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            person is eligible for voting based on age and nationality: Enter age :<input id="logical-age" type="number" /> and nationality :<input id="logical-nationality" type="text" />
+            <button onclick="eligibleVoting()" class="btn">Click Me!</button>
+          </p>
+          <p id="logical-result"></p>
+         </div>
+      </div>
+
+      <div class="assignment">
+        <h2>Strict Equality (🟰)</h2>
+        <p>
+          Write a program that compares two values using strict equality and prints whether they are equal or not.
+        </p>
+      </div>
+
+      <div class="assignment">
+        <h2>While Loops (🔁)</h2>
+        <p>Implement a program that counts down from a given number to 0 using a while loop.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>For Loops (🔂)</h2>
+        <p>Create a program that prints all even numbers between 1 and 50 using a for loop.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>Number Guessing Game (↕)</h2>
+        <p>Extend the existing number guessing game to allow the user to specify the range of numbers.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>Functions (📞)</h2>
+        <p>Write a function that takes two numbers as parameters and returns their sum.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>Variable Scope (🏠)</h2>
+        <p>
+          Demonstrate variable scope by declaring a variable inside and outside a function and try accessing them.
+        </p>
+      </div>
+
+      <div class="assignment">
+        <h2>Temperature Conversion Program (🌡️)</h2>
+        <p>Build a program that converts temperature from Celsius to Fahrenheit and vice versa using functions.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>Arrays (🗃)</h2>
+        <p>Create an array of numbers and write a program to find the sum of all the elements.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>Spread Operator (📖)</h2>
+        <p>Use the spread operator to concatenate two arrays.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>Rest Parameters (🗄)</h2>
+        <p>
+          Write a function that takes a variable number of arguments and returns their sum using rest parameters.
+        </p>
+      </div>
+
+      <div class="assignment">
+        <h2>Dice Roller Program (🎲)</h2>
+        <p>Develop a program that simulates rolling dice with a specified number of sides.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>Random Password Generator (🔑)</h2>
+        <p>Build a program that generates a random password with a specified length.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>Callbacks (🤙)</h2>
+        <p>Write a function that takes another function as a callback and executes it after a certain delay.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>forEach() (➿)</h2>
+        <p>Use the forEach() method to iterate over an array and print each element to the console.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>map() (🗺)</h2>
+        <p>Create a program that doubles each element in an array using the map() method.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>filter() (🚰)</h2>
+        <p>Write a program that filters out even numbers from an array using the filter() method.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>reduce() (♻)</h2>
+        <p>Use the reduce() method to calculate the sum of all elements in an array.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>Function Expressions (🐣)</h2>
+        <p>Declare a function using a function expression and call it to print a message.</p>
+      </div>
+
+      <div class="assignment">
+        <h2>Arrow Functions (🎯)</h2>
+        <p>Rewrite a simple function using arrow function syntax.</p>
+      </div>
+
+      <footer class="footer">
+        <a href="https://github.com/kalaivathanan"><p>Mr.K.Kalaivathanan</p></a>
+      </footer>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
