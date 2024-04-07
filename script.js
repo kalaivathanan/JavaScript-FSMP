@@ -144,7 +144,7 @@ function checkCheckbox() {
 }
 
 //ternary Operator
-function checkCheckbox() {
+function checkCheckbox1() {
   const checkBox = document.getElementById("checkbox1");
   const result = document.getElementById("checkbox-result1");
 
