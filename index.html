@@ -117,8 +117,7 @@
         <div class="answer">
           <h2>Answer</h2>
           <p>
-            guess the Correct Value: min - <input id="UserGuess-min" type="number" /> max -
-            <input id="UserGuess-max" type="number" /><button onclick="UserGuess()" class="btn">Click Me!</button>
+            guess the Correct Number:<button onclick="UserGuess()" class="btn">Click Me!</button>
           </p>
         </div>
       </div>
@@ -132,7 +131,6 @@
             Give a number is even or odd:<input id="number" type="number" />
             <button onclick="checkNumber()" class="btn">Click Me!</button>
           </p>
-          <p id="random"></p>
         </div>
       </div>
 
@@ -235,7 +233,7 @@
         <div class="answer">
           <h2>Answer</h2>
           <p>
-            person is eligible for voting based on age and nationality: Enter age :<input id="logical-age" type="number" /> and nationality :<input id="logical-nationality" type="text" />
+            person is eligible for voting based on age and nationality: Enter Age :<input id="logical-age" type="number" /> Nationality :<input id="logical-nationality" type="text" />
             <button onclick="eligibleVoting()" class="btn">Click Me!</button>
           </p>
           <p id="logical-result"></p>
@@ -247,26 +245,64 @@
         <p>
           Write a program that compares two values using strict equality and prints whether they are equal or not.
         </p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            Compares two values are strict equality: First Value (number):<input id="strict-first" type="number" /> second Value (string) :<input id="strict-second" type="text" />
+            <button onclick="strictEqual()" class="btn">Click Me!</button>
+          </p>
+          <p id="strict-result"></p>
+         </div>
       </div>
 
       <div class="assignment">
         <h2>While Loops (🔁)</h2>
         <p>Implement a program that counts down from a given number to 0 using a while loop.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            counts down from a given number to 0: Enter the number:<input id="count-number" type="number" /> 
+            <button onclick="countDown()" class="btn">Click Me!</button>
+          </p>
+          <p id="count-result"></p>
+         </div>
       </div>
 
       <div class="assignment">
         <h2>For Loops (🔂)</h2>
         <p>Create a program that prints all even numbers between 1 and 50 using a for loop.</p>
+        <div class="answer">
+          <h2>Answer</h2>
+          <p>
+            prints all even numbers between 1 and 50
+            <button onclick="evenNumber(1,50)" class="btn">Click Me!</button>
+          </p>
+          <p id="even-result"></p>
+         </div>
       </div>
 
       <div class="assignment">
         <h2>Number Guessing Game (↕)</h2>
         <p>Extend the existing number guessing game to allow the user to specify the range of numbers.</p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            guess the Correct Number: min - <input id="numberGuess-min" type="number" /> max -
+            <input id="numberGuess-max" type="number" /><button onclick="numberGuess()" class="btn">Click Me!</button>
+          </p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>Functions (📞)</h2>
         <p>Write a function that takes two numbers as parameters and returns their sum.</p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            Add Two Number with parameter <button onclick="sum(20,30)" class="btn">Click Me!</button>
+          </p>
+          <p id="sum-result"></p>
+        </div>
       </div>
 
       <div class="assignment">
@@ -274,21 +310,51 @@
         <p>
           Demonstrate variable scope by declaring a variable inside and outside a function and try accessing them.
         </p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            Demonstrate variable scope <button id="inside" onclick="variableScope(this.id)" class="btn">Inside function!</button> <button id="outside" onclick="variableScope(this.id)" class="btn">Outside function!</button>
+          </p>
+          <div id="variable-result"></div>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>Temperature Conversion Program (🌡️)</h2>
         <p>Build a program that converts temperature from Celsius to Fahrenheit and vice versa using functions.</p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            converts temperature from Celsius to Fahrenheit <input id="temp-input" type="number" value="0">
+            <button id="Celsius" onclick="temperature(this.id)" class="btn">Fahrenheit to Celsius</button>
+            <button id="Fahrenheit" onclick="temperature(this.id)" class="btn">Celsius to Fahrenheit</button>
+          </p>
+          <p id="temp-result"></p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>Arrays (🗃)</h2>
         <p>Create an array of numbers and write a program to find the sum of all the elements.</p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            Create array and sum of all element <button  onclick="arraySum()" class="btn">Sum of Array!</button>
+          </p>
+          <div id="array-result"></div>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>Spread Operator (📖)</h2>
         <p>Use the spread operator to concatenate two arrays.</p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            concatenate two arrays use Spread. <button  onclick="spreadArray()" class="btn">Concatenate Array!</button>
+          </p>
+          <p id="spread-result"></p>
+        </div>
       </div>
 
       <div class="assignment">
@@ -296,51 +362,115 @@
         <p>
           Write a function that takes a variable number of arguments and returns their sum using rest parameters.
         </p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            sum multi value using rest parameters. <button  onclick="restArray()" class="btn">sum parameters!</button>
+          </p>
+          <p id="rest-result"></p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>Dice Roller Program (🎲)</h2>
         <p>Develop a program that simulates rolling dice with a specified number of sides.</p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            Dice Roller Program. Enter the number of sides <input id="diceRoller-side" type="number"> <button  onclick="diceRoller()" class="btn">sum parameters!</button>
+          </p>
+          <p id="diceRoller-result"></p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>Random Password Generator (🔑)</h2>
         <p>Build a program that generates a random password with a specified length.</p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            generates a random password with a specified length. Enter the specified length <input id="randomPass-length" type="number"> <button  onclick="randomPass()" class="btn">sum parameters!</button>
+          </p>
+          <p id="randomPass-result"></p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>Callbacks (🤙)</h2>
         <p>Write a function that takes another function as a callback and executes it after a certain delay.</p>
+         <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            Callback function and executes it after a certain delay <button  onclick="callBack()" class="btn">CallBack Fun!</button>
+          </p>
+          <p id="callBack-result"></p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>forEach() (➿)</h2>
         <p>Use the forEach() method to iterate over an array and print each element to the console.</p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            print each element to the console <button  onclick="forEach()" class="btn">CallBack Fun!</button>
+          </p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>map() (🗺)</h2>
         <p>Create a program that doubles each element in an array using the map() method.</p>
+      <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            print each element to the console <button  onclick="map()" class="btn">CallBack Fun!</button>
+          </p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>filter() (🚰)</h2>
         <p>Write a program that filters out even numbers from an array using the filter() method.</p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            filters out even numbers from an array<button  onclick="filterArray()" class="btn">CallBack Fun!</button>
+          </p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>reduce() (♻)</h2>
         <p>Use the reduce() method to calculate the sum of all elements in an array.</p>
+        <div class="answer">
+        <h2>Answer</h2>
+          <p>
+            filters out even numbers from an array<button  onclick="reduceArray()" class="btn">CallBack Fun!</button>
+          </p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>Function Expressions (🐣)</h2>
         <p>Declare a function using a function expression and call it to print a message.</p>
+        <div class="answer">
+         <h2>Answer</h2>
+          <p>
+            filters out even numbers from an array<button  onclick="funExpressions()" class="btn">CallBack Fun!</button>
+          </p>
+        </div>
       </div>
 
       <div class="assignment">
         <h2>Arrow Functions (🎯)</h2>
         <p>Rewrite a simple function using arrow function syntax.</p>
+         <div class="answer">
+         <h2>Answer</h2>
+          <p>
+            filters out even numbers from an array<button  onclick="funArrow()" class="btn">CallBack Fun!</button>
+          </p>
+        </div>
       </div>
 
       <footer class="footer">

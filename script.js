@@ -45,17 +45,15 @@ function convert() {
 
   document.getElementById(
     "before-convert"
-  ).textContent = `Before Convert the input value - input type is "${typeof age}" and increase by 1 :- ${age} + 1 = ${
-    age + 1
-  }`;
+  ).textContent = `Before Convert the input value - input type is "${typeof age}" and increase by 1 :- ${age} + 1 = ${age + 1
+    }`;
 
   age = Number(age);
 
   document.getElementById(
     "after-convert"
-  ).textContent = `After Convert the input value - input type is "${typeof age}" and increase by 1 :- ${age} + 1 = ${
-    age + 1
-  }`;
+  ).textContent = `After Convert the input value - input type is "${typeof age}" and increase by 1 :- ${age} + 1 = ${age + 1
+    }`;
 }
 
 // Constants
@@ -100,15 +98,17 @@ function random() {
 // Random Number Generator
 
 function UserGuess() {
-  let min = +document.getElementById("UserGuess-min").value;
-  let max = +document.getElementById("UserGuess-max").value;
+  let min = 1;
+  let max = 100;
   let randomValue = Math.round(Math.random() * (max - min) + min);
   let attempt = 0;
 
   while (true) {
     let userInput = prompt(`Guess the number between ${min} and ${max}:`);
 
-    if (isNaN(userInput)) {
+    if (userInput === 'exit') {
+      return;
+    } else if (isNaN(userInput)) {
       alert(`please enter any number!`);
       continue;
     }
@@ -230,15 +230,293 @@ function chaining() {
 function eligibleVoting() {
   const logical_age = +document.getElementById("logical-age").value;
   const logical_nationality = document.getElementById("logical-nationality").value;
-    const logical_result = document.getElementById("logical-result");
+  const logical_result = document.getElementById("logical-result");
 
-    let nationality = logical_nationality.trim().replace(' ', '').toLowerCase();
-    
-    if (logical_age >= 18 && nationality == 'srilanka')
-        logical_result.textContent = "This person eligible for voting";
-    else
-    logical_result.textContent = "This person not eligible for voting";
+  let nationality = logical_nationality.trim().replace(" ", "").toLowerCase();
+
+  if (logical_age >= 18 && nationality == "srilanka")
+    logical_result.textContent = "This person eligible for voting";
+  else logical_result.textContent = "This person not eligible for voting";
 }
 
 //Strict Equality
+function strictEqual() {
+  const strict_first = +document.getElementById("strict-first").value;
+  const strict_second = document.getElementById("strict-second").value;
+  const strict_result = document.getElementById("strict-result");
 
+  if (strict_first === strict_second)
+    strict_result.textContent = `"${strict_first}" and "${strict_second}" are Equal`;
+  else strict_result.textContent = `${strict_first} and "${strict_second}" are Not Equal`;
+}
+
+//While Loops
+function countDown() {
+  let count_number = +document.getElementById("count-number").value;
+  const count_result = document.getElementById("count-result");
+
+  while (count_number >= 0) {
+    count_result.textContent += `${count_number} ,`;
+    count_number--;
+  }
+}
+
+//for Loops
+function evenNumber(min, max) {
+  const even_result = document.getElementById('even-result');
+  for (min; min <= max; min++) {
+
+    if (min % 2 == 0) {
+      even_result.textContent += `${min} ,`
+    }
+
+  }
+}
+
+
+//Number Guessing Game
+function numberGuess() {
+  let min = +document.getElementById("numberGuess-min").value;
+  let max = +document.getElementById("numberGuess-max").value;
+  let randomValue = Math.round(Math.random() * (max - min) + min);
+  let attempt = 0;
+
+  while (true) {
+    let userInput = prompt(`Guess the number between ${min} and ${max}: If you want to Exit then enter : "exit"`);
+
+    if (userInput === 'exit') {
+      return;
+    } else if (isNaN(userInput)) {
+      alert(`please enter any number!`);
+      continue;
+    } else if (Number(userInput) < min || Number(userInput) > max) {
+      alert(`please enter any a valid number!`);
+      continue;
+    }
+
+
+    userInput = Number(userInput);
+    attempt++;
+
+    if (randomValue === userInput) {
+      alert(`Congratulations! You guessed the number ${randomValue} correctly in ${attempt} attempts.`);
+      break;
+    } else if (randomValue < userInput) {
+      alert("Too high! Try again.");
+    } else {
+      alert("Too low! Try again.");
+    }
+  }
+}
+
+//function
+function sum(num1, num2) {
+  const sum_result = document.getElementById('sum-result');
+  sum_result.textContent = `first number is 20 and second number is 30 = ${num1 + num2}`;
+
+}
+
+//variable Scope
+function variableScope(click_id) {
+  const variable_result = document.getElementById("variable-result");
+  let p1 = document.createElement('p');
+  let p2 = document.createElement('p');
+  variable_result.append(p1, p2);
+
+  let global = 'global';
+
+  function inside() {
+    let local = 'local';
+    p1.textContent = `Accessing global variable inside the function : ${global}`;
+    p2.textContent = `Accessing local variable inside the function : ${local}`;
+  }
+
+  function outside() {
+    p1.textContent = `Accessing global variable outside the function: ${global}`;
+    p2.textContent = `Accessing local variable outside the function: can not access the local variable out side the function`;
+
+  }
+  if (click_id === 'inside') {
+    inside();
+  } else {
+    outside();
+  }
+
+
+}
+
+//Temperature Conversion Program
+function temperature(click_id) {
+  const temp_input = +document.getElementById('temp-input').value;
+  const temp_result = document.getElementById('temp-result');
+
+  switch (click_id) {
+    case 'Celsius':
+      temp_result.textContent = `Fahrenheit to Celsius ${((temp_input - 32) * 5 / 9).toFixed(1)} ℃`;
+      break;
+    case "Fahrenheit":
+      temp_result.textContent = `Celsius to Fahrenheit ${((temp_input * 9 / 5) + 32).toFixed(1)} ℉`;
+      break;
+
+    default:
+
+      break;
+  }
+}
+
+//Arrays
+function arraySum() {
+
+  const array_result = document.getElementById("array-result");
+  
+  alert("Please enter the 5 numbers one by one")
+  let number_array = [5];
+  let sum = 0;
+
+  for (let i = 0; i < 5; i++) {
+    const number = +prompt(`Enter the number ${i+1}`);
+    number_array[i] = number;
+  }
+
+  for (let a = 0; a < number_array.length; a++) {
+    sum += number_array[a];
+  }
+
+  array_result.textContent = `Sum of Array Value is ${sum}`;
+  
+}
+
+//Spread Operator
+function spreadArray() {
+  const spread_result = document.getElementById("spread-result");
+  let array1 = [10, 20, 30];
+  let array2 = [40, 50, 60];
+  let array3 = [];
+  array3 = [...array1, ...array2];
+  spread_result.textContent = `Array1 value ${array1} Array2 value ${array2}  spread two Arrays ${array3}`;
+}
+
+//Rest Parameters 
+function restArray() {
+  const rest_result = document.getElementById("rest-result");
+
+  function rest(...numbers) {
+    let result = 0;
+    for (const number of numbers) {
+      result += number;
+    }
+    return result;
+  }
+  rest_result.textContent = rest(10,20,30,40,50,60);
+}
+
+//diceRoller
+function diceRoller() {
+  const diceRoller_side = +document.getElementById('diceRoller-side').value;
+  const diceRoller_result = document.getElementById('diceRoller-result');
+
+  diceRoller_result.textContent=`Dice Roller Result is ${ Math.floor(Math.random() * diceRoller_side+1)} `;
+}
+
+//Random Password Generator
+function randomPass() {
+  const randomPass_length = +document.getElementById("randomPass-length").value;
+  const randomPass_result = document.getElementById("randomPass-result");
+
+  const numbers = '0123456789';
+  password =''
+
+  for (let i = 0; i < randomPass_length; i++) {
+
+   randomNumberIndex= Math.round(Math.random() * numbers.length)
+    password += numbers.charAt(randomNumberIndex);
+  }
+
+  randomPass_result.textContent = `Dice Roller Result is ${password} `;
+}
+
+//Callbacks
+function callBack() {
+  const Callbacks_result = document.getElementById("callBack-result");
+
+  function callBackFun(callBack) {
+    setTimeout(callBack, 3000);
+  }
+
+  function callBackFun1() {
+      Callbacks_result.textContent = `CallBack Function Calling`;
+  }
+  callBackFun(callBackFun1);
+
+}
+
+//forEach()
+//element, index,array
+function forEach() {
+  let number_array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  
+  number_array.forEach(display)
+
+  function display(params) {
+    console.log(params);
+  }
+}
+
+//map
+function map() {
+  let number_array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  const squares= number_array.map(square)
+  console.log(squares);
+
+
+  function square(ele) {
+    return Math.pow(ele,2)
+    
+  }
+  
+}
+
+//filter()
+function filterArray() {
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  let evenNumber = numbers.filter(isEven);
+  console.log(evenNumber);
+
+  function isEven(element) {
+    return element % 2 === 0;
+    
+  }
+}
+
+//reduce
+function reduceArray() {
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  let total = numbers.reduce(sum)
+console.log(total);
+  function sum(accumulator, element) {
+    return accumulator + element;
+    
+  }
+}
+
+//Function Expressions 
+function funExpressions() {
+
+  const printMessage = function () {
+    console.log("Hello, world!");
+  };
+  
+  printMessage();
+  
+}
+
+//Arrow Function
+function funArrow() {
+
+  const printMassage = (name) => `Hello ${name} !`;
+  console.log(printMassage('kalai')); 
+
+}
