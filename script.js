@@ -148,7 +148,7 @@ function checkCheckbox1() {
   const checkBox = document.getElementById("checkbox1");
   const result = document.getElementById("checkbox-result1");
 
-  checkBox.checked
+  (checkBox.checked)
     ? (result.textContent = `Check Box is Checked`)
     : (result.textContent = `Check Box is Unchecked`);
 }
